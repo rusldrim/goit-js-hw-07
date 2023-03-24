@@ -10,20 +10,19 @@ function createGalleryItemsMarkup(items) {
     .map(({ preview, original, description }) => {
         return `<li class="gallery__item">
             <a class="gallery__link" href="${original}">
-                <img
-                    class="gallery__image"
-                    src="${preview}"
-                    data-source="${original}"
-                    alt="${description}"
-                />
+              <img class="gallery__image"
+                src="${preview}"
+                data-source="${original}"
+                alt="${description}"
+              />
             </a>
         </li>`;
     })
-    .join('');
+  .join('');
 }
 
 const instance = basicLightbox.create(
-  `<img width="1280" height="auto" src="">`,
+  `<img width="1280" height="auto" src="">`
 );
 
 function onImgClick(e) {
